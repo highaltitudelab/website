@@ -6,7 +6,7 @@ copyright: >-
 repo_url: https://github.com/highaltitudelab/website
 repo_name: GitHub Repo
 edit_uri: edit/main/
-site_url: https://cloud-native-romandy.ch/
+site_url: https://highaltitudelab.com
 
 # Build
 site_dir: _site
@@ -33,7 +33,7 @@ plugins:
           keep_docs_dir: true
           nav_repos:
           - name: governance
-            import_url: 'https://github.com/highaltitudelab/governance.git?branch=main'
+            import_url: 'https://github.com/highaltitudelab/governance.git?branch=main&edit_uri=/blob/main/'
 
 # Markdown
 markdown_extensions:
