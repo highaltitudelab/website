@@ -2,6 +2,6 @@
 
 ## Individual Members
 
-* [Jean-Marc Mounier]
-* [Klaus Olhmann]
+* Jean-Marc Mounier
+* Klaus Olhmann
 * [Ricardo Rocha](https://github.com/rochaporto)

@@ -5,7 +5,7 @@ in particular the EU General Data Protection Regulation (GDPR) and nFADP, is:
 
 ```
 Association "High Altitude Lab"
-CH-2000 Neuchâtel
+CH-1260 Nyon
 ```
 
 ## General information
