@@ -1,619 +1,1766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>High Altitude Laboratory — Around the World in an Electric Glider</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      
-      
-      
-        <link rel="canonical" href="https://highaltitudelab.com/">
-      
-      
-      
-      
-      <link rel="icon" href="assets/images/logo/logo.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
-    
-    
-      
-        <title>Association “Cloud Native Suisse Romande” - Association "High Altitude Lab"</title>
-      
-    
-    
-      <link rel="stylesheet" href="assets/stylesheets/main.8608ea7d.min.css">
-      
-        
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
-      
-      
+<style>
+  :root {
+    --ink: #0b0e14;
+    --sky-deep: #0d1829;
+    --sky-mid: #0f2a4a;
+    --sky-light: #1a3a5c;
+    --electric: #00e5ff;
+    --electric-dim: #0099bb;
+    --amber: #f5a623;
+    --white: #f0eee8;
+    --muted: #7a8a9a;
+    --border: rgba(255,255,255,0.08);
+  }
 
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-    
-    
-      
-    
-    
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"DM Sans";--md-code-font:"Roboto Mono"}</style>
-      
-    
-    
-      <link rel="stylesheet" href="assets/css/theme.css">
-    
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-    
-      
+  html { scroll-behavior: smooth; }
 
-    
-    
-    
-  </head>
-  
-  
-    
-    
-      
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
-  
-    
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
-    <div data-md-component="skip">
-      
-    </div>
-    <div data-md-component="announce">
-      
-    </div>
-    
-    
-      
+  body {
+    background: var(--ink);
+    color: var(--white);
+    font-family: 'DM Mono', monospace;
+    overflow-x: hidden;
+    cursor: crosshair;
+  }
 
-<header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Association &#34;High Altitude Lab&#34;" class="md-header__button md-logo" aria-label="Association "High Altitude Lab"" data-md-component="logo">
-      
-  <img src="assets/images/logo/logo.png" alt="logo">
+  /* ─── NAV ─────────────────────────────── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.2rem 3rem;
+    background: rgba(11,14,20,0.7);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
 
-    </a>
-    <label class="md-header__button md-icon" for="__drawer">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
-    </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
-            Association "High Altitude Lab"
-          </span>
-        </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
-            
-              Association “Cloud Native Suisse Romande”
-            
-          </span>
-        </div>
-      </div>
-    </div>
-    
-      
-        <form class="md-header__option" data-md-component="palette">
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
-      </label>
-    
-  
-</form>
-      
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
-    
-    
-    
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
-            
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
-          </a>
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    
-    
-      <div class="md-header__source">
-        <a href="https://github.com/highaltitudelab/website" title="Go to repository" class="md-source" data-md-component="source">
-  <div class="md-source__icon md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
-  </div>
-  <div class="md-source__repository">
-    GitHub Repo
-  </div>
-</a>
-      </div>
-    
-  </nav>
-  
-</header>
-    
-    <div class="md-container" data-md-component="container">
-      
-      
-  
-        
-          
-            
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="governance/association/charter/" class="md-tabs__link">
-          
-  
-  Governance
+  .nav-logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800; font-size: 1rem;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--electric);
+  }
+  .nav-logo span { color: var(--white); }
 
-        </a>
-      </li>
-    
-  
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a {
+    font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--muted); text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--electric); }
 
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="governance/policies/1_privacy-policy/" class="md-tabs__link">
-          
-  
-  Resources
+  .nav-status {
+    display: flex; align-items: center; gap: 0.5rem;
+    font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--muted);
+  }
+  .status-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--amber);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.7); }
+  }
 
-        </a>
-      </li>
-    
-  
+  /* ─── HERO ────────────────────────────── */
+  #hero {
+    height: 100vh; position: relative;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    overflow: hidden;
+  }
 
-      
-    </ul>
-  </div>
-</nav>
-          
-        
-      
+  .star-field {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 80% 50% at 50% 0%, #0d2a4a 0%, transparent 70%),
+      radial-gradient(ellipse 60% 40% at 80% 80%, #0a1a30 0%, transparent 60%),
+      var(--ink);
+  }
 
-  <!-- Additional styles for landing page -->
-  <style>
+  /* Synthetic stars */
+  .stars {
+    position: absolute; inset: 0; overflow: hidden;
+  }
+  .stars::before, .stars::after {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 10% 15%, rgba(255,255,255,0.6) 0%, transparent 100%),
+      radial-gradient(1px 1px at 25% 8%,  rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 40% 22%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 60% 5%,  rgba(255,255,255,0.7) 0%, transparent 100%),
+      radial-gradient(1px 1px at 72% 18%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 85% 10%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 90% 30%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 15% 40%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 55% 35%, rgba(255,255,255,0.6) 0%, transparent 100%),
+      radial-gradient(1px 1px at 78% 45%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 32% 55%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 5%  60%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 92% 62%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 48% 12%, rgba(0,229,255,0.5) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 68% 28%, rgba(0,229,255,0.4) 0%, transparent 100%);
+  }
+  .stars::after {
+    background-image:
+      radial-gradient(1px 1px at 20% 70%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 38% 75%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 65% 70%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 80% 78%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 95% 85%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 12% 88%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 50% 92%, rgba(255,255,255,0.3) 0%, transparent 100%);
+  }
 
-    .md-typeset h1 {
-      font-size: xx-large;
-      font-weight: bolder;
-      margin: unset;
-    }
+  /* Glider SVG */
+  .glider-wrap {
+    position: absolute;
+    top: 18%; right: 8%;
+    width: 340px;
+    animation: soar 8s ease-in-out infinite;
+    filter: drop-shadow(0 0 18px rgba(0,229,255,0.3));
+  }
+  @keyframes soar {
+    0%, 100% { transform: translateY(0) rotate(-2deg); }
+    50% { transform: translateY(-18px) rotate(1deg); }
+  }
 
-    /* Application header should be static for the landing page */
-    .md-header {
-      position: initial;
-      display: none;
-    }
+  /* World route path behind glider */
+  .route-svg {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    opacity: 0.12; pointer-events: none;
+  }
 
-    .md-tabs {
-      display: none;
-    }
+  .hero-content {
+    position: relative; z-index: 2;
+    text-align: center;
+    max-width: 900px; padding: 0 2rem;
+  }
 
-    /* Remove spacing, as we cannot hide it completely */
-    .md-main__inner {
-      margin: 0;
-    }
+  .hero-eyebrow {
+    font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--electric); margin-bottom: 1.5rem;
+    display: flex; align-items: center; justify-content: center; gap: 1rem;
+  }
+  .hero-eyebrow::before, .hero-eyebrow::after {
+    content: '';
+    height: 1px; width: 40px;
+    background: linear-gradient(90deg, transparent, var(--electric));
+  }
+  .hero-eyebrow::after {
+    background: linear-gradient(90deg, var(--electric), transparent);
+  }
 
-    /* Hide main content for now */
-    .md-content {
-      display: none;
-    }
+  h1 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800; font-size: clamp(2.8rem, 7vw, 5.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+  }
+  h1 em {
+    font-style: italic;
+    font-family: 'Instrument Serif', serif;
+    font-weight: 400;
+    color: var(--electric);
+    display: block;
+    font-size: 1.15em;
+  }
 
-    /* Hide table of contents */
-    @media screen and (min-width: 60em) {
-      .md-sidebar--secondary {
-        display: none;
-      }
-    }
+  .hero-sub {
+    font-size: 0.85rem; color: var(--muted);
+    max-width: 520px; margin: 0 auto 2.5rem;
+    line-height: 1.8; letter-spacing: 0.02em;
+  }
 
-    /* Hide navigation */
-    @media screen and (min-width: 76.25em) {
-      .md-sidebar--primary {
-        display: none;
-      }
-    }
+  .hero-ctas {
+    display: flex; gap: 1rem;
+    justify-content: center; flex-wrap: wrap;
+  }
 
-    .mdx-hero {
-      margin-inline: auto;
-    }
+  .btn-primary {
+    background: var(--electric);
+    color: var(--ink);
+    border: none; padding: 0.85rem 2rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
+    cursor: pointer; text-decoration: none;
+    transition: all 0.2s; font-weight: 500;
+  }
+  .btn-primary:hover {
+    background: #fff; box-shadow: 0 0 24px rgba(0,229,255,0.4);
+    transform: translateY(-1px);
+  }
 
-    .mdx-hero__image {
-      margin-inline: auto;
-    }
+  .btn-ghost {
+    background: transparent;
+    color: var(--white);
+    border: 1px solid var(--border); padding: 0.85rem 2rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
+    cursor: pointer; text-decoration: none;
+    transition: all 0.2s;
+  }
+  .btn-ghost:hover {
+    border-color: var(--electric); color: var(--electric);
+    transform: translateY(-1px);
+  }
 
-    .mdx-hero__buttons {
-      margin-bottom: 20px;
+  .hero-scroll {
+    position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+    font-size: 0.6rem; letter-spacing: 0.2em; color: var(--muted);
+    text-transform: uppercase; z-index: 2;
+    display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+  }
+  .scroll-line {
+    width: 1px; height: 40px;
+    background: linear-gradient(to bottom, var(--electric), transparent);
+    animation: scrollDrop 2s ease-in-out infinite;
+  }
+  @keyframes scrollDrop {
+    0% { opacity: 0; transform: scaleY(0); transform-origin: top; }
+    50% { opacity: 1; transform: scaleY(1); }
+    100% { opacity: 0; transform: scaleY(1); transform-origin: bottom; }
+  }
 
-    }
+  /* Telemetry strip */
+  .telem-strip {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: rgba(0,229,255,0.04);
+    border-top: 1px solid rgba(0,229,255,0.15);
+    padding: 0.6rem 3rem;
+    display: flex; gap: 3rem; overflow: hidden;
+    z-index: 2;
+  }
+  .telem-item {
+    display: flex; align-items: baseline; gap: 0.5rem; flex-shrink: 0;
+    font-size: 0.65rem; letter-spacing: 0.1em;
+  }
+  .telem-label { color: var(--muted); text-transform: uppercase; }
+  .telem-val { color: var(--electric); font-weight: 500; }
+  .telem-unit { color: var(--muted); font-size: 0.6rem; }
 
-    .md-button {
-      margin-left: 5px;
-      margin-right: 5px;
-    }
+  /* ─── SECTION SHARED ──────────────────── */
+  section { padding: 7rem 3rem; max-width: 1200px; margin: 0 auto; }
+  .section-tag {
+    font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--electric); margin-bottom: 1rem;
+  }
+  h2 {
+    font-family: 'Syne', sans-serif; font-weight: 700;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.05; margin-bottom: 1.5rem;
+  }
+  h2 em {
+    font-family: 'Instrument Serif', serif; font-style: italic;
+    font-weight: 400; color: var(--electric);
+  }
+  .lead {
+    font-size: 0.85rem; color: var(--muted);
+    line-height: 1.9; max-width: 540px;
+  }
 
-    .mdx-container {
-      max-width: 600px;
-      margin-inline: auto;
+  /* ─── PILLARS ─────────────────────────── */
+  #pillars { border-top: 1px solid var(--border); }
+  .pillars-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1px; background: var(--border);
+    margin-top: 4rem;
+  }
+  .pillar {
+    background: var(--ink);
+    padding: 2.5rem;
+    transition: background 0.3s;
+  }
+  .pillar:hover { background: rgba(0,229,255,0.04); }
+  .pillar-icon {
+    font-size: 1.8rem; margin-bottom: 1.5rem;
+    line-height: 1;
+  }
+  .pillar h3 {
+    font-family: 'Syne', sans-serif; font-weight: 700;
+    font-size: 1.3rem; margin-bottom: 0.8rem;
+    color: var(--white);
+  }
+  .pillar p {
+    font-size: 0.78rem; line-height: 1.9;
+    color: var(--muted);
+  }
+  .pillar-num {
+    font-size: 0.6rem; letter-spacing: 0.15em;
+    color: var(--electric); margin-bottom: 0.5rem;
+  }
 
-      @media screen and (min-height: 60em) {
-        transform: translateY(30%);
-      }
+  /* ─── ROUTE ───────────────────────────── */
+  #route { border-top: 1px solid var(--border); }
+  .route-header {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 4rem; align-items: start; margin-bottom: 4rem;
+  }
+  .route-map-wrap {
+    position: relative; background: var(--sky-deep);
+    border: 1px solid var(--border);
+    overflow: hidden; aspect-ratio: 16/9;
+  }
+  .route-map-overlay {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 80%, rgba(0,229,255,0.08), transparent 70%);
+    pointer-events: none;
+  }
+  .legs {
+    display: flex; flex-direction: column; gap: 0;
+  }
+  .leg {
+    display: flex; align-items: stretch;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.2s;
+  }
+  .leg:hover { background: rgba(0,229,255,0.04); }
+  .leg-num {
+    font-size: 0.6rem; letter-spacing: 0.1em; color: var(--electric);
+    width: 2.5rem; display: flex; align-items: center; justify-content: center;
+    border-right: 1px solid var(--border); flex-shrink: 0;
+  }
+  .leg-body { padding: 1rem 1.2rem; flex: 1; }
+  .leg-route {
+    font-family: 'Syne', sans-serif; font-weight: 600;
+    font-size: 0.9rem; margin-bottom: 0.2rem;
+  }
+  .leg-detail {
+    font-size: 0.65rem; color: var(--muted); letter-spacing: 0.05em;
+  }
+  .leg-meta {
+    padding: 1rem; display: flex; flex-direction: column;
+    align-items: flex-end; justify-content: center; gap: 0.2rem;
+    border-left: 1px solid var(--border);
+    font-size: 0.65rem; color: var(--muted); min-width: 90px;
+  }
+  .leg-meta strong { color: var(--white); font-size: 0.75rem; }
 
-      div {
-        text-align:center;
-      }
-    }
+  /* ─── GLIDER SPEC ─────────────────────── */
+  #aircraft { border-top: 1px solid var(--border); }
+  .spec-layout {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 4rem; align-items: start; margin-top: 4rem;
+  }
+  .spec-visual {
+    background: var(--sky-deep);
+    border: 1px solid var(--border);
+    padding: 2rem; position: relative;
+    overflow: hidden;
+  }
+  .spec-visual::after {
+    content: 'TOP VIEW';
+    position: absolute; bottom: 1rem; right: 1rem;
+    font-size: 0.55rem; letter-spacing: 0.2em; color: rgba(0,229,255,0.3);
+  }
+  .spec-table {
+    display: flex; flex-direction: column; gap: 0;
+  }
+  .spec-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .spec-row:first-child { border-top: 1px solid var(--border); }
+  .spec-key { font-size: 0.7rem; color: var(--muted); letter-spacing: 0.05em; }
+  .spec-val {
+    font-size: 0.85rem; color: var(--electric); font-weight: 500;
+    text-align: right;
+  }
 
-    [data-md-color-scheme="slate"] {
-      .md-button {
-        color: #f8f8f8;
-      }
-    }
-  </style>
+  /* ─── SCIENCE ─────────────────────────── */
+  #science { border-top: 1px solid var(--border); }
+  .instruments-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr);
+    gap: 1px; background: var(--border);
+    margin-top: 4rem;
+  }
+  .instrument {
+    background: var(--ink); padding: 2rem;
+    transition: background 0.3s;
+  }
+  .instrument:hover { background: rgba(0,229,255,0.04); }
+  .instr-tag {
+    font-size: 0.55rem; letter-spacing: 0.18em; color: var(--amber);
+    text-transform: uppercase; margin-bottom: 0.6rem;
+  }
+  .instrument h4 {
+    font-family: 'Syne', sans-serif; font-weight: 600;
+    font-size: 1rem; margin-bottom: 0.5rem;
+  }
+  .instrument p {
+    font-size: 0.75rem; line-height: 1.85; color: var(--muted);
+  }
 
-  <section class="mdx-container">
-    <div class="md-grid md-typeset">
-      <div class="mdx-hero">
-        <div class="mdx-hero__image">
-          <img src="assets/images/logo/logo.png" alt="High Altitude Lab logo" width="360" draggable="false">
-        </div>
-        <div class="mdx-hero__content">
-          <h1>High Altitude Lab *</h1>
-          <p></p>
-        </div>
-        <div class="mdx-hero__buttons">
-          <a href="events" title="Events" class="md-button">
-            Events
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+  /* ─── LIVE FEED ───────────────────────── */
+  #live { border-top: 1px solid var(--border); }
+  .live-grid {
+    display: grid; grid-template-columns: 2fr 1fr;
+    gap: 1.5rem; margin-top: 4rem;
+  }
+  .feed-panel {
+    background: var(--sky-deep);
+    border: 1px solid var(--border);
+    position: relative; overflow: hidden;
+    aspect-ratio: 16/9;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .feed-scanlines {
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(
+      to bottom,
+      transparent 0px, transparent 3px,
+      rgba(0,0,0,0.08) 3px, rgba(0,0,0,0.08) 4px
+    );
+    pointer-events: none; z-index: 2;
+  }
+  .feed-label {
+    position: absolute; top: 1rem; left: 1rem;
+    font-size: 0.6rem; letter-spacing: 0.15em; color: var(--electric);
+    background: rgba(0,229,255,0.08); padding: 0.3rem 0.6rem;
+    border: 1px solid rgba(0,229,255,0.2);
+    z-index: 3;
+  }
+  .feed-offline {
+    font-size: 0.7rem; letter-spacing: 0.1em; color: var(--muted);
+    text-transform: uppercase; text-align: center;
+  }
+  .feed-offline strong {
+    display: block; font-family: 'Syne', sans-serif; font-weight: 700;
+    font-size: 1.1rem; color: var(--amber); margin-bottom: 0.4rem;
+    letter-spacing: 0.05em;
+  }
+  .feed-rec {
+    position: absolute; top: 1rem; right: 1rem;
+    display: flex; align-items: center; gap: 0.4rem;
+    font-size: 0.6rem; letter-spacing: 0.15em; color: #ff4444;
+    z-index: 3;
+  }
+  .rec-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: #ff4444; animation: pulse 1.2s infinite;
+  }
+  .telem-panels {
+    display: flex; flex-direction: column; gap: 1.5rem;
+  }
+  .telem-card {
+    background: var(--sky-deep);
+    border: 1px solid var(--border);
+    padding: 1.2rem;
+  }
+  .telem-card-label {
+    font-size: 0.6rem; letter-spacing: 0.15em; color: var(--muted);
+    text-transform: uppercase; margin-bottom: 0.6rem;
+  }
+  .telem-card-val {
+    font-size: 1.6rem; color: var(--electric); font-weight: 500;
+    margin-bottom: 0.2rem;
+  }
+  .telem-card-sub {
+    font-size: 0.6rem; color: var(--muted);
+  }
+  .telem-bar {
+    height: 2px; background: rgba(0,229,255,0.15);
+    margin-top: 0.8rem; position: relative; overflow: hidden;
+  }
+  .telem-bar-fill {
+    height: 100%; background: var(--electric);
+    transition: width 1s ease;
+  }
 
-      <main class="md-main" data-md-component="main">
-        <div class="md-main__inner md-grid">
-          
-            
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
+  /* ─── TECH STACK ──────────────────────── */
+  #technology { border-top: 1px solid var(--border); }
+  .tech-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem; margin-top: 4rem;
+  }
+  .tech-card {
+    border: 1px solid var(--border); padding: 1.8rem;
+    transition: border-color 0.3s, background 0.3s;
+  }
+  .tech-card:hover {
+    border-color: rgba(0,229,255,0.3);
+    background: rgba(0,229,255,0.04);
+  }
+  .tech-logo {
+    font-family: 'DM Mono', monospace; font-size: 0.65rem;
+    color: var(--electric); letter-spacing: 0.1em;
+    background: rgba(0,229,255,0.1); padding: 0.25rem 0.6rem;
+    display: inline-block; margin-bottom: 1rem;
+  }
+  .tech-card h4 {
+    font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .tech-card p {
+    font-size: 0.75rem; color: var(--muted); line-height: 1.85;
+  }
 
+  /* ─── TEAM ────────────────────────────── */
+  #team { border-top: 1px solid var(--border); }
+  .team-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem; margin-top: 4rem;
+  }
+  .team-card {
+    border-bottom: 1px solid var(--border); padding-bottom: 1.5rem;
+  }
+  .team-avatar {
+    width: 56px; height: 56px; border-radius: 50%;
+    background: var(--sky-mid); border: 1px solid var(--border);
+    margin-bottom: 1rem;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem;
+  }
+  .team-card h4 {
+    font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 600;
+    margin-bottom: 0.2rem;
+  }
+  .team-role {
+    font-size: 0.65rem; color: var(--electric); letter-spacing: 0.1em;
+    text-transform: uppercase; margin-bottom: 0.6rem;
+  }
+  .team-card p { font-size: 0.75rem; color: var(--muted); line-height: 1.8; }
 
-  
+  /* ─── TIMELINE ────────────────────────── */
+  #timeline { border-top: 1px solid var(--border); }
+  .timeline-track {
+    position: relative; margin-top: 4rem;
+    padding-left: 2rem;
+  }
+  .timeline-track::before {
+    content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+    width: 1px; background: linear-gradient(to bottom, var(--electric), transparent);
+  }
+  .milestone {
+    position: relative; padding: 0 0 2.5rem 2rem;
+  }
+  .milestone::before {
+    content: ''; position: absolute; left: -2rem;
+    top: 0.3rem; width: 5px; height: 5px;
+    border-radius: 50%; background: var(--electric);
+    box-shadow: 0 0 8px var(--electric);
+  }
+  .milestone.future::before { background: var(--muted); box-shadow: none; }
+  .milestone-date {
+    font-size: 0.6rem; letter-spacing: 0.15em; color: var(--electric);
+    margin-bottom: 0.4rem; text-transform: uppercase;
+  }
+  .milestone.future .milestone-date { color: var(--muted); }
+  .milestone h4 {
+    font-family: 'Syne', sans-serif; font-size: 0.95rem;
+    font-weight: 600; margin-bottom: 0.3rem;
+  }
+  .milestone p { font-size: 0.75rem; color: var(--muted); line-height: 1.8; }
 
+  /* ─── NEWSLETTER ──────────────────────── */
+  #follow {
+    border-top: 1px solid var(--border);
+    background: radial-gradient(ellipse 70% 60% at 50% 100%, var(--sky-mid), transparent);
+  }
+  .follow-inner {
+    text-align: center; max-width: 560px; margin: 0 auto;
+  }
+  .follow-form {
+    display: flex; gap: 0; margin-top: 2rem;
+    border: 1px solid var(--border);
+  }
+  .follow-form input {
+    flex: 1; background: transparent; border: none; outline: none;
+    padding: 0.9rem 1rem;
+    font-family: 'DM Mono', monospace; font-size: 0.75rem;
+    color: var(--white); letter-spacing: 0.05em;
+  }
+  .follow-form input::placeholder { color: var(--muted); }
+  .follow-form button {
+    background: var(--electric); color: var(--ink);
+    border: none; padding: 0.9rem 1.5rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
+    cursor: pointer; font-weight: 500; white-space: nowrap;
+    transition: background 0.2s;
+  }
+  .follow-form button:hover { background: #fff; }
+  .follow-note {
+    font-size: 0.65rem; color: var(--muted); margin-top: 1rem;
+    letter-spacing: 0.05em;
+  }
 
-  
+  /* ─── FOOTER ──────────────────────────── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem 3rem;
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 0.65rem; color: var(--muted); letter-spacing: 0.08em;
+  }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--electric); }
 
-<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a href="." title="Association &#34;High Altitude Lab&#34;" class="md-nav__button md-logo" aria-label="Association "High Altitude Lab"" data-md-component="logo">
-      
-  <img src="assets/images/logo/logo.png" alt="logo">
+  /* ─── ANIMATIONS ──────────────────────── */
+  .fade-in {
+    opacity: 0; transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .fade-in.visible {
+    opacity: 1; transform: translateY(0);
+  }
 
-    </a>
-    Association "High Altitude Lab"
-  </label>
-  
-    <div class="md-nav__source">
-      <a href="https://github.com/highaltitudelab/website" title="Go to repository" class="md-source" data-md-component="source">
-  <div class="md-source__icon md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
-  </div>
-  <div class="md-source__repository">
-    GitHub Repo
-  </div>
-</a>
-    </div>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Governance
-    
-  </span>
-  
+  /* ─── RESPONSIVE ──────────────────────── */
+  /* ─── AI COPILOT — AETHER ────────────── */
+  #aicopilot { border-top: 1px solid var(--border); }
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1">
-            <span class="md-nav__icon md-icon"></span>
-            Governance
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="governance/association/charter/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Association Charter
-    
-  </span>
-  
+  /* Feature strip */
+  .aether-strip {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1px; background: var(--border);
+    margin-top: 3.5rem;
+  }
+  .aether-feat {
+    background: var(--ink); padding: 1.8rem;
+    transition: background 0.3s;
+  }
+  .aether-feat:hover { background: rgba(0,229,255,0.04); }
+  .aether-feat-icon {
+    color: var(--electric); margin-bottom: 0.9rem;
+    opacity: 0.9;
+  }
+  .aether-feat-label {
+    font-family: 'Syne', sans-serif; font-weight: 600;
+    font-size: 0.85rem; margin-bottom: 0.5rem;
+    color: var(--white);
+  }
+  .aether-feat-desc {
+    font-size: 0.72rem; color: var(--muted); line-height: 1.85;
+  }
 
-      </a>
-    </li>
-  
+  /* Cockpit UI wrapper */
+  .aether-ui-wrap {
+    margin-top: 3rem;
+    border: 1px solid rgba(0,229,255,0.18);
+    background: var(--sky-deep);
+    position: relative;
+    overflow: hidden;
+  }
+  .aether-ui-wrap::before {
+    content: '';
+    position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(0,229,255,0.05), transparent 70%);
+  }
+  .aether-badge {
+    background: rgba(0,229,255,0.12);
+    border: 1px solid rgba(0,229,255,0.3);
+    color: var(--electric);
+    font-size: 0.6rem; letter-spacing: 0.15em;
+    padding: 0.25rem 0.6rem; font-weight: 500;
+  }
+  .aether-ui-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0.8rem 1.2rem;
+    border-bottom: 1px solid rgba(0,229,255,0.1);
+    background: rgba(0,0,0,0.2);
+  }
+  .aether-ui-body {
+    display: grid; grid-template-columns: 1fr 1.1fr 0.9fr;
+    gap: 1px; background: rgba(0,229,255,0.06);
+  }
+  .aether-panel {
+    background: var(--sky-deep);
+    padding: 1.2rem;
+  }
+  .aether-panel-title {
+    font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--electric); margin-bottom: 1rem; opacity: 0.8;
+  }
 
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
+  /* Advisories */
+  .advisory {
+    display: flex; gap: 0.8rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .advisory:last-child { border-bottom: none; }
+  .adv-priority {
+    font-size: 0.55rem; letter-spacing: 0.1em;
+    padding: 0.2rem 0.4rem; align-self: flex-start; flex-shrink: 0;
+    font-weight: 500; margin-top: 1px;
+  }
+  .advisory-high .adv-priority {
+    background: rgba(239,68,68,0.15); color: #f87171;
+    border: 1px solid rgba(239,68,68,0.3);
+  }
+  .advisory-med .adv-priority {
+    background: rgba(245,166,35,0.12); color: var(--amber);
+    border: 1px solid rgba(245,166,35,0.3);
+  }
+  .advisory-low .adv-priority {
+    background: rgba(0,229,255,0.08); color: var(--electric);
+    border: 1px solid rgba(0,229,255,0.2);
+  }
+  .adv-title {
+    font-size: 0.72rem; font-weight: 500; color: var(--white);
+    margin-bottom: 0.25rem;
+  }
+  .adv-text {
+    font-size: 0.67rem; color: var(--muted); line-height: 1.7;
+  }
 
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Resources
-    
-  </span>
-  
+  /* Model inputs */
+  .model-input-list { display: flex; flex-direction: column; gap: 0; }
+  .model-input {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0.45rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    font-size: 0.65rem;
+  }
+  .mi-label { color: var(--muted); }
+  .mi-val { font-size: 0.63rem; text-align: right; }
+  .mi-ok { color: #4ade80; }
+  .mi-warn { color: var(--amber); }
+  .model-confidence {
+    display: flex; align-items: center; gap: 0.6rem;
+    margin-top: 1rem; padding-top: 0.8rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .mc-label { font-size: 0.6rem; color: var(--muted); white-space: nowrap; }
+  .mc-bar-wrap {
+    flex: 1; height: 3px; background: rgba(255,255,255,0.08);
+    position: relative; overflow: hidden;
+  }
+  .mc-bar {
+    height: 100%; width: var(--fill);
+    background: linear-gradient(90deg, var(--electric-dim), var(--electric));
+  }
+  .mc-val { font-size: 0.7rem; color: var(--electric); min-width: 2rem; text-align: right; }
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            Resources
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="governance/policies/1_privacy-policy/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Privacy Policy
-    
-  </span>
-  
+  /* UI footer strip */
+  .aether-ui-footer {
+    display: flex; gap: 2rem; flex-wrap: wrap;
+    padding: 0.7rem 1.2rem;
+    border-top: 1px solid rgba(0,229,255,0.1);
+    background: rgba(0,0,0,0.2);
+    font-size: 0.65rem; color: var(--muted);
+  }
 
-      </a>
-    </li>
-  
+  /* Training section */
+  .aether-training {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 4rem; align-items: start;
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--border);
+  }
+  .training-stats {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .tstat { }
+  .tstat-val {
+    font-family: 'Syne', sans-serif; font-weight: 800;
+    font-size: 1.8rem; color: var(--electric);
+    line-height: 1; margin-bottom: 0.4rem;
+  }
+  .tstat-label {
+    font-size: 0.65rem; color: var(--muted); line-height: 1.5;
+  }
 
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
+  /* Principle quote block */
+  .aether-principle {
+    margin-top: 3rem; padding: 2rem 2.5rem;
+    border-left: 2px solid rgba(0,229,255,0.3);
+    background: rgba(0,229,255,0.03);
+    display: flex; flex-direction: column; gap: 0.6rem;
+  }
+  .ap-quote {
+    font-family: 'Instrument Serif', serif;
+    font-size: 3rem; line-height: 0.5;
+    color: rgba(0,229,255,0.25); margin-bottom: 0.3rem;
+  }
+  .ap-text {
+    font-size: 0.82rem; color: var(--muted);
+    line-height: 1.9; max-width: 680px;
+    font-style: italic;
+  }
+  .ap-attr {
+    font-size: 0.65rem; color: var(--electric);
+    letter-spacing: 0.08em;
+  }
 
-    
+  @media (max-width: 900px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    section { padding: 4rem 1.5rem; }
+    .pillars-grid { grid-template-columns: 1fr; }
+    .route-header { grid-template-columns: 1fr; }
+    .spec-layout { grid-template-columns: 1fr; }
+    .instruments-grid { grid-template-columns: 1fr; }
+    .live-grid { grid-template-columns: 1fr; }
+    .tech-grid { grid-template-columns: 1fr; }
+    .team-grid { grid-template-columns: repeat(2, 1fr); }
+    .glider-wrap { width: 200px; top: 12%; right: 2%; }
+    .telem-strip { display: none; }
+    footer { flex-direction: column; gap: 1rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ─── NAVIGATION ─────────────────────── -->
+<nav>
+  <div class="nav-logo">High Altitude<span> Lab.</span></div>
+  <ul class="nav-links">
+    <li><a href="#route">Route</a></li>
+    <li><a href="#aircraft">Aircraft</a></li>
+    <li><a href="#science">Science</a></li>
+    <li><a href="#live">Live</a></li>
+    <li><a href="#technology">Technology</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#follow">Follow</a></li>
   </ul>
+  <div class="nav-status">
+    <div class="status-dot"></div>
+    Pre-flight — departure 2026
+  </div>
 </nav>
-                  </div>
-                </div>
-              </div>
-            
-            
-          
-          
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
-                
 
-              </article>
-            </div>
-          
-          
-  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+<!-- ─── HERO ────────────────────────────── -->
+<section id="hero">
+  <div class="star-field"></div>
+  <div class="stars"></div>
 
-<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+  <!-- World map route outline -->
+  <svg class="route-svg" viewBox="0 0 1400 700" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+    <path d="M100,350 C200,200 400,180 600,220 C800,260 1000,200 1200,240 C1350,265 1380,320 1400,350" fill="none" stroke="#00e5ff" stroke-width="1" stroke-dasharray="6 8"/>
+    <path d="M100,350 C200,500 400,520 600,480 C800,440 1000,500 1200,460 C1350,435 1380,390 1400,350" fill="none" stroke="#00e5ff" stroke-width="0.5" stroke-dasharray="4 12" opacity="0.5"/>
+    <!-- Waypoint dots -->
+    <circle cx="100" cy="350" r="4" fill="#00e5ff" opacity="0.8"/>
+    <circle cx="280" cy="215" r="3" fill="#00e5ff" opacity="0.6"/>
+    <circle cx="500" cy="200" r="3" fill="#00e5ff" opacity="0.6"/>
+    <circle cx="720" cy="230" r="3" fill="#00e5ff" opacity="0.6"/>
+    <circle cx="940" cy="195" r="3" fill="#00e5ff" opacity="0.6"/>
+    <circle cx="1150" cy="250" r="3" fill="#00e5ff" opacity="0.6"/>
+    <circle cx="1400" cy="350" r="4" fill="#00e5ff" opacity="0.8"/>
+  </svg>
+
+  <!-- Glider SVG illustration -->
+  <div class="glider-wrap">
+    <svg viewBox="0 0 340 120" xmlns="http://www.w3.org/2000/svg">
+      <!-- Main wing left -->
+      <path d="M170,55 C140,48 80,30 20,42 C10,44 8,50 20,52 C80,54 140,58 170,58 Z" fill="#0a1829" stroke="#00e5ff" stroke-width="0.8"/>
+      <!-- Main wing right -->
+      <path d="M170,55 C200,48 260,30 320,42 C330,44 332,50 320,52 C260,54 200,58 170,58 Z" fill="#0a1829" stroke="#00e5ff" stroke-width="0.8"/>
+      <!-- Fuselage -->
+      <path d="M120,55 C130,45 155,40 170,40 C185,40 195,44 210,52 C220,57 200,65 170,62 C145,60 130,62 120,55 Z" fill="#0d1f36" stroke="#00e5ff" stroke-width="1"/>
+      <!-- Cockpit canopy -->
+      <path d="M142,52 C152,44 165,41 178,44 C190,47 195,52 192,56 C182,54 162,54 142,52 Z" fill="rgba(0,229,255,0.15)" stroke="#00e5ff" stroke-width="0.8"/>
+      <!-- Nose -->
+      <path d="M120,55 C110,54 102,56 98,58 C102,60 112,62 122,59 Z" fill="#0d1f36" stroke="#00e5ff" stroke-width="0.8"/>
+      <!-- Tail fin -->
+      <path d="M202,52 C208,44 216,38 218,40 C218,46 212,54 208,56 Z" fill="#0d1f36" stroke="#00e5ff" stroke-width="0.8"/>
+      <!-- Horizontal stab -->
+      <path d="M200,55 C210,52 228,50 236,52 C228,57 210,58 200,58 Z" fill="#0a1829" stroke="#00e5ff" stroke-width="0.7"/>
+      <path d="M200,55 C210,58 228,60 236,58 C228,63 210,62 200,60 Z" fill="#0a1829" stroke="#00e5ff" stroke-width="0.7"/>
+      <!-- Prop spinner hint (electric motor, front) -->
+      <circle cx="98" cy="58" r="4" fill="rgba(0,229,255,0.2)" stroke="#00e5ff" stroke-width="0.8"/>
+      <!-- Solar cells on wing -->
+      <rect x="40" y="47" width="60" height="6" rx="1" fill="rgba(0,229,255,0.12)" stroke="rgba(0,229,255,0.3)" stroke-width="0.5"/>
+      <rect x="242" y="47" width="60" height="6" rx="1" fill="rgba(0,229,255,0.12)" stroke="rgba(0,229,255,0.3)" stroke-width="0.5"/>
+      <!-- Wing grid lines -->
+      <line x1="60" y1="46" x2="62" y2="54" stroke="rgba(0,229,255,0.2)" stroke-width="0.5"/>
+      <line x1="72" y1="44" x2="74" y2="53" stroke="rgba(0,229,255,0.2)" stroke-width="0.5"/>
+      <line x1="84" y1="43" x2="86" y2="52" stroke="rgba(0,229,255,0.2)" stroke-width="0.5"/>
+      <line x1="258" y1="44" x2="256" y2="53" stroke="rgba(0,229,255,0.2)" stroke-width="0.5"/>
+      <line x1="270" y1="43" x2="268" y2="52" stroke="rgba(0,229,255,0.2)" stroke-width="0.5"/>
+      <line x1="282" y1="43" x2="280" y2="52" stroke="rgba(0,229,255,0.2)" stroke-width="0.5"/>
+      <!-- Glow effect (fake, via circles) -->
+      <circle cx="170" cy="55" r="90" fill="none" stroke="rgba(0,229,255,0.05)" stroke-width="20"/>
+    </svg>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">World First</div>
+    <h1>
+      Around the World
+      <em>in a Sustainable Glider</em>
+    </h1>
+    <p class="hero-sub">
+      A circumnavigation fueled by thermals, sustainable energy, and passion —
+      streaming live science data from 10,000 meters.
+    </p>
+    <div class="hero-ctas">
+      <a href="#live" class="btn-primary">Watch Live</a>
+      <a href="#route" class="btn-ghost">Explore Route</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    Scroll
+  </div>
+
+  <!-- Live telemetry strip -->
+  <div class="telem-strip">
+    <div class="telem-item">
+      <span class="telem-label">Status</span>
+      <span class="telem-val">Pre-flight</span>
+    </div>
+    <div class="telem-item">
+      <span class="telem-label">Altitude</span>
+      <span class="telem-val">—</span>
+      <span class="telem-unit">ft MSL</span>
+    </div>
+    <div class="telem-item">
+      <span class="telem-label">Airspeed</span>
+      <span class="telem-val">—</span>
+      <span class="telem-unit">kts</span>
+    </div>
+    <div class="telem-item">
+      <span class="telem-label">Battery</span>
+      <span class="telem-val">100%</span>
+    </div>
+    <div class="telem-item">
+      <span class="telem-label">Solar</span>
+      <span class="telem-val">—</span>
+      <span class="telem-unit">W</span>
+    </div>
+    <div class="telem-item">
+      <span class="telem-label">Distance covered</span>
+      <span class="telem-val">0</span>
+      <span class="telem-unit">nm</span>
+    </div>
+    <div class="telem-item">
+      <span class="telem-label">Total distance</span>
+      <span class="telem-val">40,000/span>
+      <span class="telem-unit">kms</span>
+    </div>
+  </div>
+</section>
+
+<!-- ─── THREE PILLARS ──────────────────── -->
+<section id="pillars">
+  <div class="section-tag">The Mission</div>
+  <h2>Three forces. <em>One flight.</em></h2>
+  <div class="pillars-grid fade-in">
+    <div class="pillar">
+      <div class="pillar-num">01 —</div>
+      <div class="pillar-icon">⚡</div>
+      <h3>Adventure</h3>
+      <p>
+        No aircraft has ever circumnavigated the globe using only electric propulsion and soaring flight.
+        We rely on thermals, ridge lift, and mountain waves — the same invisible rivers of air
+        that eagles have used for millions of years — combined with a lightweight electric motor
+        for climb-out and safety margins.
+      </p>
+    </div>
+    <div class="pillar">
+      <div class="pillar-num">02 —</div>
+      <div class="pillar-icon">🔬</div>
+      <h3>Science</h3>
+      <p>
+        The glider carries a suite of research-grade instruments across multiple disciplines:
+        atmospheric chemistry, aerobiology, electromagnetic sensing, microplastic sampling,
+        ionospheric monitoring and more. Data collected across multiple continents and altitudes
+        contributes to ongoing research at partner institutes worldwide.
+      </p>
+    </div>
+    <div class="pillar">
+      <div class="pillar-num">03 —</div>
+      <div class="pillar-icon">☁️</div>
+      <h3>Technology</h3>
+      <p>
+        Every sensor reading, GPS coordinate, and cockpit video frame is transmitted via satellite
+        link and ingested by a cloud-native pipeline — Kubernetes, event streaming, real-time
+        dashboards — so that scientists and the public can watch discovery unfold, live, from
+        the other side of the planet.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── ROUTE ───────────────────────────── -->
+<section id="route">
+  <div class="section-tag">The Journey</div>
+  <div class="route-header fade-in">
+    <div>
+      <h2>Six continents,<br><em>twelve legs.</em></h2>
+      <p class="lead">
+        Departing from France, the route threads through some of the planet's most
+        spectacular soaring terrain — the Alps, the Himalayan peaks,
+        the Australian Great Dividing Range, and the Andes — before returning home
+        across the North Atlantic.
+      </p>
+    </div>
+    <div>
+      <div style="font-size:0.65rem;color:var(--muted);margin-bottom:0.5rem;letter-spacing:0.1em;text-transform:uppercase;">Total distance</div>
+      <div style="font-family:'Syne',sans-serif;font-size:3rem;font-weight:800;color:var(--electric);line-height:1;">~40,000<span style="font-size:1rem;color:var(--muted);font-weight:400;margin-left:0.3rem;">km</span></div>
+      <div style="font-size:0.65rem;color:var(--muted);margin-top:0.3rem;margin-bottom:2rem;">≈ 21,600 nautical miles</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+        <div>
+          <div style="font-size:0.6rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;">Estimated duration</div>
+          <div style="font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:700;color:var(--white);">90 days</div>
         </div>
-        
-          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  Back to top
-</button>
-        
-      </main>
-      
-        <footer class="md-footer">
-  
-    
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright">
-  
-    <div class="md-copyright__highlight">
-      Copyright &copy; 2026 - Association "High Altitude Lab" and all contributors. The content and the license are licensed under CC BY 4.0
+        <div>
+          <div style="font-size:0.6rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;">Countries</div>
+          <div style="font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:700;color:var(--white);">28+</div>
+        </div>
+        <div>
+          <div style="font-size:0.6rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;">Continents</div>
+          <div style="font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:700;color:var(--white);">6</div>
+        </div>
+        <div>
+          <div style="font-size:0.6rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;">Waypoints</div>
+          <div style="font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:700;color:var(--white);">32</div>
+        </div>
+      </div>
     </div>
-  
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
-  
-</div>
-      
-        <div class="md-social">
-  
-    
-    
-    
-    
-    <a href="https://github.com/highaltitudelab" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
-    </a>
-  
-</div>
-      
+  </div>
+
+  <div class="legs fade-in">
+    <div class="leg">
+      <div class="leg-num">01</div>
+      <div class="leg-body">
+        <div class="leg-route">Geneva → Casablanca</div>
+        <div class="leg-detail">Europe → Africa via the Pyrenees and Strait of Gibraltar</div>
+      </div>
+      <div class="leg-meta"><strong>1,820 km</strong><span>3 days</span></div>
     </div>
+    <div class="leg">
+      <div class="leg-num">02</div>
+      <div class="leg-body">
+        <div class="leg-route">Casablanca → Cairo</div>
+        <div class="leg-detail">Atlas Mountains, Sahara thermals, Nile valley</div>
+      </div>
+      <div class="leg-meta"><strong>3,640 km</strong><span>5 days</span></div>
+    </div>
+    <div class="leg">
+      <div class="leg-num">03</div>
+      <div class="leg-body">
+        <div class="leg-route">Cairo → Dubai</div>
+        <div class="leg-detail">Red Sea crossing, Arabian Peninsula</div>
+      </div>
+      <div class="leg-meta"><strong>2,200 km</strong><span>4 days</span></div>
+    </div>
+    <div class="leg">
+      <div class="leg-num">04</div>
+      <div class="leg-body">
+        <div class="leg-route">Dubai → Ahmedabad → Kolkata</div>
+        <div class="leg-detail">Indian subcontinent, Himalayan foothills approach</div>
+      </div>
+      <div class="leg-meta"><strong>4,100 km</strong><span>6 days</span></div>
+    </div>
+    <div class="leg">
+      <div class="leg-num">05</div>
+      <div class="leg-body">
+        <div class="leg-route">Kolkata → Kunming → Shanghai</div>
+        <div class="leg-detail">Southeast Asia, over the Yunnan plateau</div>
+      </div>
+      <div class="leg-meta"><strong>3,800 km</strong><span>5 days</span></div>
+    </div>
+    <div class="leg">
+      <div class="leg-num">06</div>
+      <div class="leg-body">
+        <div class="leg-route">Shanghai → Tokyo → Guam</div>
+        <div class="leg-detail">Pacific island hopping begins; longest over-water legs</div>
+      </div>
+      <div class="leg-meta"><strong>3,100 km</strong><span>5 days</span></div>
+    </div>
+    <div class="leg">
+      <div class="leg-num">07</div>
+      <div class="leg-body">
+        <div class="leg-route">Guam → Hawaii → Los Angeles</div>
+        <div class="leg-detail">Central Pacific crossing — most demanding leg</div>
+      </div>
+      <div class="leg-meta"><strong>5,400 km</strong><span>9 days</span></div>
+    </div>
+    <div class="leg">
+      <div class="leg-num">08</div>
+      <div class="leg-body">
+        <div class="leg-route">Los Angeles → Lima</div>
+        <div class="leg-detail">North to South America, Pacific coast of Mexico</div>
+      </div>
+      <div class="leg-meta"><strong>4,200 km</strong><span>6 days</span></div>
+    </div>
+    <div class="leg">
+      <div class="leg-num">09</div>
+      <div class="leg-body">
+        <div class="leg-route">Lima → Buenos Aires</div>
+        <div class="leg-detail">Andes ridge soaring at extreme altitude</div>
+      </div>
+      <div class="leg-meta"><strong>3,100 km</strong><span>5 days</span></div>
+    </div>
+    <div class="leg">
+      <div class="leg-num">10</div>
+      <div class="leg-body">
+        <div class="leg-route">Buenos Aires → Cape Town</div>
+        <div class="leg-detail">South Atlantic crossing via Tristan da Cunha</div>
+      </div>
+      <div class="leg-meta"><strong>5,800 km</strong><span>10 days</span></div>
+    </div>
+    <div class="leg">
+      <div class="leg-num">11</div>
+      <div class="leg-body">
+        <div class="leg-route">Cape Town → Dakar</div>
+        <div class="leg-detail">West African coast northbound</div>
+      </div>
+      <div class="leg-meta"><strong>4,600 km</strong><span>7 days</span></div>
+    </div>
+    <div class="leg">
+      <div class="leg-num">12</div>
+      <div class="leg-body">
+        <div class="leg-route">Dakar → Geneva</div>
+        <div class="leg-detail">North Atlantic, Iberian peninsula, Alps — home</div>
+      </div>
+      <div class="leg-meta"><strong>3,240 km</strong><span>5 days</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── AIRCRAFT ───────────────────────── -->
+<section id="aircraft">
+  <div class="section-tag">The Aircraft</div>
+  <h2>Built for the <em>challenge.</em></h2>
+  <div class="spec-layout fade-in">
+    <div>
+      <div class="spec-visual">
+        <svg viewBox="0 0 500 180" xmlns="http://www.w3.org/2000/svg" width="100%">
+          <!-- Wing top view -->
+          <!-- Left wing -->
+          <path d="M250,85 C230,78 170,55 60,68 C42,71 38,80 60,82 C170,88 230,92 250,92 Z" fill="#0a1829" stroke="#00e5ff" stroke-width="0.8"/>
+          <!-- Right wing -->
+          <path d="M250,85 C270,78 330,55 440,68 C458,71 462,80 440,82 C330,88 270,92 250,92 Z" fill="#0a1829" stroke="#00e5ff" stroke-width="0.8"/>
+          <!-- Fuselage -->
+          <path d="M180,85 C195,72 225,66 250,66 C275,66 292,72 312,82 C324,88 298,98 250,95 C210,92 190,97 180,85 Z" fill="#0d1f36" stroke="#00e5ff" stroke-width="1"/>
+          <!-- Canopy -->
+          <path d="M200,80 C215,70 232,67 252,70 C270,73 278,80 276,85 C264,83 238,82 200,80 Z" fill="rgba(0,229,255,0.15)" stroke="#00e5ff" stroke-width="0.8"/>
+          <!-- Tail -->
+          <path d="M302,82 C316,72 328,60 332,63 C332,72 322,84 316,87 Z" fill="#0d1f36" stroke="#00e5ff" stroke-width="0.8"/>
+          <path d="M305,84 C320,80 345,78 354,80 C345,87 320,89 305,89 Z" fill="#0a1829" stroke="#00e5ff" stroke-width="0.7"/>
+          <path d="M305,84 C320,88 345,91 354,89 C345,96 320,96 305,91 Z" fill="#0a1829" stroke="#00e5ff" stroke-width="0.7"/>
+          <!-- Motor -->
+          <circle cx="180" cy="87" r="6" fill="rgba(0,229,255,0.15)" stroke="#00e5ff" stroke-width="1"/>
+          <!-- Solar panels -->
+          <rect x="72"  y="73" width="80" height="10" rx="1" fill="rgba(0,229,255,0.1)" stroke="rgba(0,229,255,0.3)" stroke-width="0.5"/>
+          <rect x="350" y="73" width="80" height="10" rx="1" fill="rgba(0,229,255,0.1)" stroke="rgba(0,229,255,0.3)" stroke-width="0.5"/>
+          <!-- Panel grid lines -->
+          <line x1="90"  y1="72" x2="90"  y2="84" stroke="rgba(0,229,255,0.2)" stroke-width="0.5"/>
+          <line x1="105" y1="71" x2="105" y2="84" stroke="rgba(0,229,255,0.2)" stroke-width="0.5"/>
+          <line x1="120" y1="70" x2="120" y2="84" stroke="rgba(0,229,255,0.2)" stroke-width="0.5"/>
+          <line x1="135" y1="70" x2="135" y2="84" stroke="rgba(0,229,255,0.2)" stroke-width="0.5"/>
+          <line x1="365" y1="71" x2="365" y2="84" stroke="rgba(0,229,255,0.2)" stroke-width="0.5"/>
+          <line x1="380" y1="70" x2="380" y2="84" stroke="rgba(0,229,255,0.2)" stroke-width="0.5"/>
+          <line x1="395" y1="70" x2="395" y2="84" stroke="rgba(0,229,255,0.2)" stroke-width="0.5"/>
+          <line x1="410" y1="71" x2="410" y2="84" stroke="rgba(0,229,255,0.2)" stroke-width="0.5"/>
+          <!-- Dimension arrows -->
+          <line x1="60" y1="140" x2="440" y2="140" stroke="rgba(0,229,255,0.3)" stroke-width="0.5" marker-end="url(#arr)"/>
+          <line x1="440" y1="140" x2="60" y2="140" stroke="rgba(0,229,255,0.3)" stroke-width="0.5" marker-end="url(#arr)"/>
+          <text x="250" y="155" text-anchor="middle" font-family="DM Mono, monospace" font-size="9" fill="rgba(0,229,255,0.5)" letter-spacing="1">28 m wingspan</text>
+          <defs>
+            <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto">
+              <path d="M2 1L8 5L2 9" fill="none" stroke="rgba(0,229,255,0.4)" stroke-width="1.5"/>
+            </marker>
+          </defs>
+        </svg>
+      </div>
+    </div>
+    <div class="spec-table">
+      <div class="spec-row">
+        <span class="spec-key">Wingspan</span>
+        <span class="spec-val">23 m</span>
+      </div>
+      <div class="spec-row">
+        <span class="spec-key">Glide ratio</span>
+        <span class="spec-val">1:50</span>
+      </div>
+      <div class="spec-row">
+        <span class="spec-key">Max takeoff weight</span>
+        <span class="spec-val">850 kg</span>
+      </div>
+      <div class="spec-row">
+        <span class="spec-key">Electric motor</span>
+        <span class="spec-val">60 kW continuous</span>
+      </div>
+      <div class="spec-row">
+        <span class="spec-key">Battery capacity</span>
+        <span class="spec-val">120 kWh</span>
+      </div>
+      <div class="spec-row">
+        <span class="spec-key">Max cruise speed</span>
+        <span class="spec-val">140 knots</span>
+      </div>
+      <div class="spec-row">
+        <span class="spec-key">Satellite uplink</span>
+        <span class="spec-val">Starlink aviation terminal</span>
+      </div>
+      <div class="spec-row">
+        <span class="spec-key">Science payload</span>
+        <span class="spec-val">42 kg</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SCIENCE PAYLOAD ────────────────── -->
+<section id="science">
+  <div class="section-tag">Scientific Payload</div>
+  <h2>A laboratory at <em>altitude.</em></h2>
+  <p class="lead" style="margin-bottom:0;">
+    Every kilogram of the science payload was selected in collaboration
+    with research institutions across four continents, targeting data gaps
+    that can only be filled from a slow-moving, low-altitude platform.
+  </p>
+  <div class="instruments-grid fade-in">
+    <div class="instrument">
+      <div class="instr-tag">Atmospheric Chemistry</div>
+      <h4>Trace Gas Analyser</h4>
+      <p>Continuous measurement of CO₂, CH₄, N₂O, and O₃ concentration profiles
+         at sub-100-metre vertical resolution. Data feeds directly into atmospheric
+         reanalysis models at partner meteorological institutes.</p>
+    </div>
+    <div class="instrument">
+      <div class="instr-tag">Aerobiology</div>
+      <h4>Aerial Biosampler Array</h4>
+      <p>Six impaction samplers capture airborne spores, pollen, and microorganisms
+         at different altitudes. Samples are preserved in situ and analysed at
+         landing waypoints to map the aerobiome across biomes and seasons.</p>
+    </div>
+    <div class="instrument">
+      <div class="instr-tag">Microplastics</div>
+      <h4>Cascade Impactor Sampler</h4>
+      <p>A cascade impactor with polycarbonate membranes collects atmospheric
+         microplastic particles from 1 μm to 300 μm across different size classes,
+         contributing to the first global altitude-resolved microplastic dataset.</p>
+    </div>
+    <div class="instrument">
+      <div class="instr-tag">Electromagnetic</div>
+      <h4>Schumann Resonance Monitor</h4>
+      <p>Ultra-low-frequency magnetic field sensors capture global lightning
+         activity and Schumann resonances. The glider's non-conductive composite
+         airframe provides exceptional shielding from electrical interference.</p>
+    </div>
+    <div class="instrument">
+      <div class="instr-tag">Ionosphere</div>
+      <h4>Total Electron Content Probe</h4>
+      <p>A dual-frequency GNSS receiver measures ionospheric total electron content
+         variations at high temporal resolution, contributing to space-weather
+         monitoring during the current solar maximum.</p>
+    </div>
+    <div class="instrument">
+      <div class="instr-tag">Meteorology</div>
+      <h4>Radiosonde-class Met Package</h4>
+      <p>Temperature, pressure, humidity, and wind profiling at research grade —
+         equivalent to a radiosonde but with horizontal coverage across thousands
+         of kilometres per flight day, filling gaps in the global weather network.</p>
+    </div>
+    <div class="instrument">
+      <div class="instr-tag">Thermal Imaging</div>
+      <h4>Infrared Soaring Mapper</h4>
+      <p>A longwave infrared camera maps surface thermal emission to identify
+         convective triggers. This data will help validate next-generation
+         numerical weather prediction models for thermal forecasting.</p>
+    </div>
+    <div class="instrument">
+      <div class="instr-tag">Acoustics</div>
+      <h4>LIDAR</h4>
+      <p>...</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── LIVE DATA ──────────────────────── -->
+<section id="live">
+  <div class="section-tag">Live During Flight</div>
+  <h2>Watch science <em>happen.</em></h2>
+  <p class="lead" style="margin-bottom:0;">
+    When the mission is airborne, this section streams live cockpit video and
+    real-time telemetry ingested from the satellite uplink.
+  </p>
+  <div class="live-grid fade-in">
+    <div class="feed-panel">
+      <div class="feed-scanlines"></div>
+      <div class="feed-label">COCKPIT CAM — LIVE</div>
+      <div class="feed-rec"><div class="rec-dot"></div> STANDBY</div>
+      <div class="feed-offline">
+        <strong>Pre-Flight</strong>
+        Live video activates at departure.<br>
+        Subscribe below to receive the alert.
+      </div>
+    </div>
+    <div class="telem-panels">
+      <div class="telem-card">
+        <div class="telem-card-label">Altitude MSL</div>
+        <div class="telem-card-val">— ft</div>
+        <div class="telem-card-sub">Last update: awaiting departure</div>
+        <div class="telem-bar"><div class="telem-bar-fill" style="width:0%"></div></div>
+      </div>
+      <div class="telem-card">
+        <div class="telem-card-label">Battery SoC</div>
+        <div class="telem-card-val">100%</div>
+        <div class="telem-card-sub">120 kWh — fully charged</div>
+        <div class="telem-bar"><div class="telem-bar-fill" style="width:100%"></div></div>
+      </div>
+      <div class="telem-card">
+        <div class="telem-card-label">Solar harvest</div>
+        <div class="telem-card-val">— W</div>
+        <div class="telem-card-sub">Peak: 7,200 W expected</div>
+        <div class="telem-bar"><div class="telem-bar-fill" style="width:0%"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── AI COPILOT ─────────────────────── -->
+<section id="aicopilot">
+  <div class="section-tag">AI Co-Pilot</div>
+  <h2>A mind trained on <em>ten million thermals.</em></h2>
+  <p class="lead" style="margin-bottom:0;">
+    AETHER — Adaptive Energy &amp; Thermal Heuristic Engine for Route-planning —
+    is an onboard AI system that processes live weather data, real-time
+    sensor readings and a decade of global soaring records to act as
+    the pilot's second brain. It never commands; it recommends.
+    The final decision always rests with the human at the controls.
+  </p>
+
+  <div class="aether-strip fade-in">
+    <div class="aether-feat">
+      <div class="aether-feat-icon">
+        <svg viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="14" r="8"/><path d="M16 8 C13 11 13 17 16 20 C19 17 19 11 16 8Z" fill="currentColor" opacity="0.3"/><path d="M8 14 C11 11 17 11 20 14 C17 17 11 17 8 14Z" fill="currentColor" opacity="0.2"/></svg>
+      </div>
+      <div class="aether-feat-label">Thermal Detection</div>
+      <div class="aether-feat-desc">Predicts convective triggers 15–40 km ahead using surface temperature maps, NWP model output and onboard IR data.</div>
+    </div>
+    <div class="aether-feat">
+      <div class="aether-feat-icon">
+        <svg viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22 Q10 8 16 16 Q22 24 28 8"/><path d="M4 28 Q10 16 16 22 Q22 28 28 16" opacity="0.35"/></svg>
+      </div>
+      <div class="aether-feat-label">Wave Soaring</div>
+      <div class="aether-feat-desc">Mountain wave modelling using orographic forcing and upstream radiosonde profiles to locate standing wave crests.</div>
+    </div>
+    <div class="aether-feat">
+      <div class="aether-feat-icon">
+        <svg viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 26 L12 16 L18 20 L26 8"/><path d="M22 8 L26 8 L26 12"/></svg>
+      </div>
+      <div class="aether-feat-label">Route Optimisation</div>
+      <div class="aether-feat-desc">Continuous Pareto-front search balancing distance, energy budget, time-of-arrival and risk — updated every 5 minutes.</div>
+    </div>
+    <div class="aether-feat">
+      <div class="aether-feat-icon">
+        <svg viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="10" width="20" height="14" rx="3"/><path d="M11 17 L15 20 L21 14"/></svg>
+      </div>
+      <div class="aether-feat-label">Energy Management</div>
+      <div class="aether-feat-desc">Dynamic motor-on/motor-off scheduling that maximises battery range while keeping the aircraft above minimum safe altitude.</div>
+    </div>
+    <div class="aether-feat">
+      <div class="aether-feat-icon">
+        <svg viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="10"/><path d="M16 8 L16 16 L22 12"/><path d="M9 16 C9 12 12 9 16 9" stroke-dasharray="2 2"/></svg>
+      </div>
+      <div class="aether-feat-label">Circling Guidance</div>
+      <div class="aether-feat-desc">Optimal bank angle, circle radius and thermal entry point based on real-time vertical speed variometry and wind shear.</div>
+    </div>
+    <div class="aether-feat">
+      <div class="aether-feat-icon">
+        <svg viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 10 L16 6 L26 10 L26 20 C26 25 16 28 16 28 C16 28 6 25 6 20 Z"/><path d="M16 13 L16 20 M13 16.5 L19 16.5" stroke-width="2"/></svg>
+      </div>
+      <div class="aether-feat-label">Risk Assessment</div>
+      <div class="aether-feat-desc">Continuous storm-cell tracking, icing layer detection and airspace conflict alerts with suggested avoidance manoeuvres.</div>
+    </div>
+  </div>
+
+  <!-- AETHER mock cockpit display -->
+  <div class="aether-ui-wrap fade-in">
+    <div class="aether-ui-header">
+      <div style="display:flex;align-items:center;gap:0.8rem;">
+        <div class="aether-badge">AETHER v2.1</div>
+        <span style="font-size:0.65rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;">Advisory Mode — Pilot in Command</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.65rem;color:var(--electric);">
+        <div class="status-dot" style="background:var(--electric);box-shadow:0 0 6px var(--electric);"></div>
+        Models Active — NWP sync 4 min ago
+      </div>
+    </div>
+    <div class="aether-ui-body">
+      <!-- Left: vertical profile -->
+      <div class="aether-panel aether-profile">
+        <div class="aether-panel-title">Vertical Profile — Next 80 km</div>
+        <svg viewBox="0 0 260 200" width="100%" xmlns="http://www.w3.org/2000/svg">
+          <line x1="40" y1="10" x2="40" y2="165" stroke="rgba(255,255,255,0.06)" stroke-width="0.5"/>
+          <line x1="40" y1="165" x2="250" y2="165" stroke="rgba(255,255,255,0.06)" stroke-width="0.5"/>
+          <line x1="40" y1="130" x2="250" y2="130" stroke="rgba(255,255,255,0.04)" stroke-width="0.5" stroke-dasharray="3 4"/>
+          <line x1="40" y1="95"  x2="250" y2="95"  stroke="rgba(255,255,255,0.04)" stroke-width="0.5" stroke-dasharray="3 4"/>
+          <line x1="40" y1="60"  x2="250" y2="60"  stroke="rgba(255,255,255,0.04)" stroke-width="0.5" stroke-dasharray="3 4"/>
+          <line x1="40" y1="25"  x2="250" y2="25"  stroke="rgba(255,255,255,0.04)" stroke-width="0.5" stroke-dasharray="3 4"/>
+          <text x="34" y="133" text-anchor="end" font-family="DM Mono,monospace" font-size="8" fill="rgba(120,140,160,0.7)">2k</text>
+          <text x="34" y="98"  text-anchor="end" font-family="DM Mono,monospace" font-size="8" fill="rgba(120,140,160,0.7)">4k</text>
+          <text x="34" y="63"  text-anchor="end" font-family="DM Mono,monospace" font-size="8" fill="rgba(120,140,160,0.7)">6k</text>
+          <text x="34" y="28"  text-anchor="end" font-family="DM Mono,monospace" font-size="8" fill="rgba(120,140,160,0.7)">8k</text>
+          <!-- Terrain -->
+          <path d="M40,165 L70,155 L90,152 L110,148 L130,158 L155,165 L175,160 L200,165 L220,158 L240,162 L250,165 Z" fill="rgba(100,80,60,0.25)" stroke="rgba(200,160,100,0.3)" stroke-width="0.8"/>
+          <!-- Thermal columns -->
+          <rect x="68" y="80" width="14" height="85" fill="rgba(245,166,35,0.08)" rx="2"/>
+          <rect x="130" y="100" width="12" height="65" fill="rgba(245,166,35,0.06)" rx="2"/>
+          <rect x="195" y="65" width="16" height="100" fill="rgba(245,166,35,0.1)" rx="2"/>
+          <line x1="68"  y1="80"  x2="82"  y2="80"  stroke="rgba(245,166,35,0.5)" stroke-width="0.8" stroke-dasharray="2 2"/>
+          <line x1="130" y1="100" x2="142" y2="100" stroke="rgba(245,166,35,0.4)" stroke-width="0.8" stroke-dasharray="2 2"/>
+          <line x1="195" y1="65"  x2="211" y2="65"  stroke="rgba(245,166,35,0.6)" stroke-width="0.8" stroke-dasharray="2 2"/>
+          <!-- Wave zone -->
+          <rect x="148" y="18" width="76" height="36" fill="rgba(0,229,255,0.06)" rx="2" stroke="rgba(0,229,255,0.15)" stroke-width="0.5"/>
+          <text x="186" y="32" text-anchor="middle" font-family="DM Mono,monospace" font-size="7.5" fill="rgba(0,229,255,0.6)">WAVE ZONE</text>
+          <text x="186" y="44" text-anchor="middle" font-family="DM Mono,monospace" font-size="7" fill="rgba(0,229,255,0.45)">+6.2 m/s predicted</text>
+          <!-- Glider position -->
+          <circle cx="55" cy="97" r="4" fill="#00e5ff"/>
+          <circle cx="55" cy="97" r="8" fill="none" stroke="rgba(0,229,255,0.3)" stroke-width="0.8"/>
+          <!-- Recommended path -->
+          <path d="M55,97 C80,88 90,83 107,86 C120,88 130,98 155,54 C175,27 210,24 237,28" fill="none" stroke="#00e5ff" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.85"/>
+          <!-- Alt path -->
+          <path d="M55,97 C82,100 102,104 132,110 C157,115 197,102 237,92" fill="none" stroke="rgba(120,140,160,0.3)" stroke-width="0.8" stroke-dasharray="3 4"/>
+          <!-- Distance labels -->
+          <text x="40"  y="177" font-family="DM Mono,monospace" font-size="8" fill="rgba(120,140,160,0.6)">0</text>
+          <text x="144" y="177" font-family="DM Mono,monospace" font-size="8" fill="rgba(120,140,160,0.6)" text-anchor="middle">40 km</text>
+          <text x="248" y="177" font-family="DM Mono,monospace" font-size="8" fill="rgba(120,140,160,0.6)" text-anchor="end">80 km</text>
+          <!-- Legend -->
+          <line x1="40"  y1="192" x2="62"  y2="192" stroke="#00e5ff" stroke-width="1.2" stroke-dasharray="4 3"/>
+          <text x="66" y="195" font-family="DM Mono,monospace" font-size="8" fill="rgba(0,229,255,0.75)">AI-recommended</text>
+          <line x1="145" y1="192" x2="164" y2="192" stroke="rgba(120,140,160,0.4)" stroke-width="0.8" stroke-dasharray="3 4"/>
+          <text x="168" y="195" font-family="DM Mono,monospace" font-size="8" fill="rgba(120,140,160,0.5)">Alternative</text>
+        </svg>
+      </div>
+      <!-- Centre: advisories -->
+      <div class="aether-panel aether-advisories">
+        <div class="aether-panel-title">Active Advisories</div>
+        <div class="advisory advisory-high">
+          <div class="adv-priority">HIGH</div>
+          <div class="adv-body">
+            <div class="adv-title">Mountain wave entry — 23 km ahead</div>
+            <div class="adv-text">Climb to FL095 before waypoint DELTA. Predicted 6.2 m/s lift between FL080–FL130. Turn 8° left to intercept optimal entry point.</div>
+          </div>
+        </div>
+        <div class="advisory advisory-med">
+          <div class="adv-priority">MED</div>
+          <div class="adv-body">
+            <div class="adv-title">Thermal at 11 o'clock — 4.2 km</div>
+            <div class="adv-text">Convective trigger over dark terrain patch. Top: 2,800 m. Strength: 3.1 m/s. Suggest one 360° orbit to gain 280 m before next glide.</div>
+          </div>
+        </div>
+        <div class="advisory advisory-low">
+          <div class="adv-priority">INFO</div>
+          <div class="adv-body">
+            <div class="adv-title">Battery forecast: waypoint arrival +14%</div>
+            <div class="adv-text">Lift exceeds plan assumptions. Arriving LIMA-4 with 14% surplus charge. Motor-off phase extended by 18 min.</div>
+          </div>
+        </div>
+        <div class="advisory advisory-low">
+          <div class="adv-priority">INFO</div>
+          <div class="adv-body">
+            <div class="adv-title">Airspace class D — active 14:00Z</div>
+            <div class="adv-text">CTA activates in 47 min. Current ETA through sector: 13:42Z — clear by 18 min. No re-route required.</div>
+          </div>
+        </div>
+      </div>
+      <!-- Right: model inputs -->
+      <div class="aether-panel aether-inputs">
+        <div class="aether-panel-title">Model Inputs — Live</div>
+        <div class="model-input-list">
+          <div class="model-input">
+            <div class="mi-label">NWP (ECMWF HRES)</div>
+            <div class="mi-val mi-ok">1 h lag</div>
+          </div>
+          <div class="model-input">
+            <div class="mi-label">ICON Convection</div>
+            <div class="mi-val mi-ok">1 km mesh — live</div>
+          </div>
+          <div class="model-input">
+            <div class="mi-label">Onboard variometer</div>
+            <div class="mi-val mi-ok">+2.4 m/s (30s avg)</div>
+          </div>
+          <div class="model-input">
+            <div class="mi-label">Onboard IR camera</div>
+            <div class="mi-val mi-ok">14 targets ahead</div>
+          </div>
+          <div class="model-input">
+            <div class="mi-label">Radiosonde network</div>
+            <div class="mi-val mi-ok">3 stations in range</div>
+          </div>
+          <div class="model-input">
+            <div class="mi-label">OGN glider network</div>
+            <div class="mi-val mi-ok">12 gliders reporting</div>
+          </div>
+          <div class="model-input">
+            <div class="mi-label">Sat lightning tracker</div>
+            <div class="mi-val mi-warn">Cell 80 km NE</div>
+          </div>
+          <div class="model-input">
+            <div class="mi-label">Soaring database</div>
+            <div class="mi-val mi-ok">4.2M flights indexed</div>
+          </div>
+        </div>
+        <div class="model-confidence">
+          <div class="mc-label">Model confidence</div>
+          <div class="mc-bar-wrap">
+            <div class="mc-bar" style="--fill:82%"></div>
+          </div>
+          <div class="mc-val">82%</div>
+        </div>
+      </div>
+    </div>
+    <div class="aether-ui-footer">
+      <span>Next model re-run in <strong style="color:var(--electric)">04:38</strong></span>
+      <span>Horizon: <strong style="color:var(--white)">+6 hrs</strong></span>
+      <span>Alternatives evaluated: <strong style="color:var(--white)">2,847</strong></span>
+      <span>Energy saving vs baseline: <strong style="color:#4ade80">+22%</strong></span>
+    </div>
+  </div>
+
+  <!-- Training background -->
+  <div class="aether-training fade-in">
+    <div>
+      <div class="section-tag" style="margin-bottom:0.8rem;">How It Was Built</div>
+      <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.6rem;line-height:1.1;margin-bottom:1rem;">
+        Trained on decades of<br><em style="font-family:'Instrument Serif',serif;font-style:italic;color:var(--electric);font-weight:400;">soaring intelligence.</em>
+      </h3>
+      <p style="font-size:0.78rem;color:var(--muted);line-height:1.9;max-width:420px;">
+        AETHER was trained on a corpus of over 4.2 million IGC flight logs from the
+        Open Glider Network — the largest real-world soaring dataset ever assembled —
+        fused with matched NWP reanalysis fields from ERA5. A graph neural network
+        learns the relationship between atmospheric state and soaring outcomes;
+        a reinforcement-learned policy then searches for the energy-optimal path
+        through that predicted environment in real time.
+      </p>
+    </div>
+    <div class="training-stats">
+      <div class="tstat">
+        <div class="tstat-val">4.2M</div>
+        <div class="tstat-label">IGC flight logs in training set</div>
+      </div>
+      <div class="tstat">
+        <div class="tstat-val">38 yr</div>
+        <div class="tstat-label">ERA5 reanalysis data span</div>
+      </div>
+      <div class="tstat">
+        <div class="tstat-val">180+</div>
+        <div class="tstat-label">Countries &amp; terrain types covered</div>
+      </div>
+      <div class="tstat">
+        <div class="tstat-val">5 min</div>
+        <div class="tstat-label">Route re-optimisation cycle</div>
+      </div>
+      <div class="tstat">
+        <div class="tstat-val">30 ms</div>
+        <div class="tstat-label">Advisory latency onboard</div>
+      </div>
+      <div class="tstat">
+        <div class="tstat-val">+22%</div>
+        <div class="tstat-label">Energy gain vs unassisted (simulation)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Philosophy statement -->
+  <div class="aether-principle fade-in">
+    <div class="ap-quote">"</div>
+    <div class="ap-text">
+      AETHER is not an autopilot. It has no authority over the aircraft.
+      Every advisory is a suggestion — the product of statistical inference
+      from atmospheric data, not certainty. The pilot may accept, modify,
+      or ignore any recommendation at any time. In aviation, the human
+      in command is always the final authority.
+    </div>
+    <div class="ap-attr">— Mission Safety Philosophy</div>
+  </div>
+</section>
+
+<!-- ─── TECHNOLOGY ─────────────────────── -->
+<section id="technology">
+  <div class="section-tag">Cloud Architecture</div>
+  <h2>Cloud-native from <em>10,000 meters.</em></h2>
+  <p class="lead" style="margin-bottom:0;">
+    The ground segment is a fully containerised, event-driven pipeline that
+    ingests raw telemetry from the satellite link and exposes it to scientists
+    and the public within seconds of transmission.
+  </p>
+  <div class="tech-grid fade-in">
+    <div class="tech-card">
+      <div class="tech-logo">OBSERVABILITY</div>
+      <h4>Satellite Uplink &amp; Prometheus</h4>
+      <p>Starlink aviation terminal connects the glider terminal to a ground cluster,
+         exposing telemetry data with Prometheus every second.
+         A ground gateway publishes each frame to Apache Kafka topics partitioned
+         by sensor type, providing durable, replayable event storage.</p>
+    </div>
+    <div class="tech-card">
+      <div class="tech-logo">PROCESS</div>
+      <h4>Apache Flink Stream Processing</h4>
+      <p>Stateful stream processors running on Kubernetes perform unit conversion,
+         sensor fusion, anomaly detection and quality-control flagging in under
+         200 ms from message receipt — before data ever reaches the dashboard.</p>
+    </div>
+    <div class="tech-card">
+      <div class="tech-logo">STORE</div>
+      <h4>TimescaleDB + Object Storage</h4>
+      <p>All telemetry is persisted in TimescaleDB for time-series queries and
+         in S3-compatible object storage as Parquet files for long-term scientific
+         archival. Raw data is made openly available under CC0 licence.</p>
+    </div>
+    <div class="tech-card">
+      <div class="tech-logo">VISUALISE</div>
+      <h4>Grafana Live Dashboards</h4>
+      <p>In addition to the basic data shown in the main live streaming panel,
+         detailed Grafana dashboards remain available with both live and historical
+         data, showing the flight path, sensor readings and battery state updated every second.</p>
+    </div>
+    <div class="tech-card">
+      <div class="tech-logo">VIDEO</div>
+      <h4>WebRTC Cockpit Stream</h4>
+      <p>The cockpit camera feeds a Janus WebRTC gateway via the satellite link.
+         Adaptive bitrate encoding adjusts from 2 Mbps over the Pacific down to
+         512 kbps over poor-coverage areas to maintain continuous broadcast.</p>
+    </div>
+    <div class="tech-card">
+      <div class="tech-logo">ORCHESTRATE</div>
+      <h4>Kubernetes on Multi-Region Cloud</h4>
+      <p>Workloads are spread across three cloud regions to ensure sub-second
+         failover. GitOps with ArgoCD manages all deployments; Prometheus and
+         Alertmanager provide 24/7 SRE coverage throughout the flight.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TEAM ────────────────────────────── -->
+<section id="team">
+  <div class="section-tag">The Team</div>
+  <h2>Driven by <em>passion.</em></h2>
+  <div class="team-grid fade-in">
+    <div class="team-card">
+      <div class="team-avatar">✈️</div>
+      <h4>Klaus Ohlmann</h4>
+      <div class="team-role">Chief Pilot &amp; Mission Commander</div>
+      <p>Klaus is a four-time world champion and, with over 60 world records, the most successful glider pilot of all time. In addition to his successful practice as a dentist, he worked in his own mountain flying school “Quo Vadis” in southern France.</p>
+    </div>
+    <div class="team-card">
+      <div class="team-avatar">🔬</div>
+      <h4>Ricardo Rocha</h4>
+      <div class="team-role">Pilot &amp; Chief Technologist</div>
+      <p>Ricardo is a passionate glider pilot and instructor, and during working hours a computing engineer at the European Organization for Nuclear Research (CERN). He's been promoting and advocating technology developments for scientific computing.</p>
+    </div>
+    <div class="team-card">
+      <div class="team-avatar">⚙️</div>
+      <h4>Jean-Marc Mounier</h4>
+      <div class="team-role">Pilot &amp; Director</div>
+      <p>Jean-Marc is... </p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TIMELINE ───────────────────────── -->
+<section id="timeline">
+  <div class="section-tag">Mission Timeline</div>
+  <h2>The road to <em>departure.</em></h2>
+  <div class="timeline-track fade-in">
+    <div class="milestone">
+      <div class="milestone-date">Q1 2026</div>
+      <h4>Concept &amp; Feasibility</h4>
+      <p>Initial route analysis, energy budgeting across all legs,
+         partnership discussions with key scientific institutions.</p>
+    </div>
+    <div class="milestone">
+      <div class="milestone-date">Q2 2026</div>
+      <h4>First Flight — Prototype</h4>
+      <p>Prototype airframe achieves first flight.
+         Electric propulsion system validated.</p>
+    </div>
+    <div class="milestone">
+      <div class="milestone-date">Q3 2026</div>
+      <h4>Complete Science Payload Integration</h4>
+      <p>All instrument packages integrated and flight-tested;
+         Starlink aviation terminal calibrated.</p>
+    </div>
+    <div class="milestone future">
+      <div class="milestone-date">Q3 2025 — Target</div>
+      <h4>Departure — Geneva Cointrin</h4>
+      <p>Mission launch, pending final airworthiness certification
+         and remaining overflight permit approvals.</p>
+    </div>
+    <div class="milestone future">
+      <div class="milestone-date">Q4 2025 — Target</div>
+      <h4>Return to Geneva</h4>
+      <p>Expected touchdown after approximately 90 days airborne,
+         completing the first electric glider circumnavigation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOLLOW ─────────────────────────── -->
+<section id="follow">
+  <div class="follow-inner fade-in">
+    <div class="section-tag" style="text-align:center;">Stay With Us</div>
+    <h2 style="text-align:center;">Don't miss<br><em>a single thermal.</em></h2>
+    <p class="lead" style="text-align:center;margin:0 auto 0.5rem;">
+      Subscribe to receive departure alerts, daily flight reports,
+      and early access to the live telemetry dashboard.
+    </p>
+    <div class="follow-form">
+      <input type="email" placeholder="your@email.com" />
+      <button type="button">Subscribe</button>
+    </div>
+    <p class="follow-note">No noise. Departure alerts, daily dispatches, science highlights.</p>
+  </div>
+</section>
+
+<!-- ─── FOOTER ──────────────────────────── -->
+<footer>
+  <div>© 2026 High Altitude Laboratory</div>
+  <div style="display:flex;gap:2rem;">
+    <a href="#">Press Kit</a>
+    <a href="#">Science Partners</a>
+    <a href="#">Open Data</a>
+    <a href="#">Contact</a>
   </div>
 </footer>
-      
-    </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
-    
-    
-    <script id="__config" type="application/json">{"base": ".", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.code.select", "content.tabs.link", "content.tooltips", "navigation.footer", "navigation.path", "navigation.sections", "navigation.expand", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "toc.integrate"], "search": "assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-    
-    
-      <script src="assets/javascripts/bundle.f1b6f286.min.js"></script>
-      
-    
-  </body>
+
+<script>
+  // ─── INTERSECTION OBSERVER for fade-ins ───
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // ─── Animated telemetry demo (pre-flight idle) ───
+  const bars = document.querySelectorAll('.telem-bar-fill');
+  // battery stays at 100, others at 0 — already set in HTML
+
+  // ─── Subscribe button feedback ───
+  const subBtn = document.querySelector('.follow-form button');
+  const subInput = document.querySelector('.follow-form input');
+  if (subBtn) {
+    subBtn.addEventListener('click', () => {
+      if (subInput.value.includes('@')) {
+        subBtn.textContent = 'Confirmed ✓';
+        subBtn.style.background = '#00e5ff';
+        subInput.value = '';
+        subInput.placeholder = 'You\'re on the list.';
+      } else {
+        subInput.style.outline = '1px solid #f5a623';
+        setTimeout(() => subInput.style.outline = '', 1000);
+      }
+    });
+  }
+</script>
+</body>
 </html>
