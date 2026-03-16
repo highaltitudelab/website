@@ -24,16 +24,6 @@ plugins:
   - macros
   - mkdocs-pdf
   - same-dir
-  - group:
-      enabled: !ENV [FULL_BUILD, true]
-      plugins:
-      - multirepo:
-          # TODO: Change to True once works
-          cleanup: false
-          keep_docs_dir: true
-          nav_repos:
-          - name: governance
-            import_url: 'https://github.com/highaltitudelab/governance.git?branch=main&edit_uri=/blob/main/'
 
 # Markdown
 markdown_extensions:
